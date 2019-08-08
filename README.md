@@ -4,7 +4,7 @@
 <html>
 <body>
 <h3>Description</h3>
-<p>this is a desktop application for HRM.</p>
+<p>This human resources management software is developed by combining a number of necessary HR functions, such as employee data Storing, managing payrolls, employee payment, benefits administration, keeping track of attendance records, accepting employe leaving request, etc..</p>
 <h3>Language Used</h3>
   <p>C #</p>
 <h3>Development Environment </h3>
