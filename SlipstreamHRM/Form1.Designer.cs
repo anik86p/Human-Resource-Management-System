@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.slipstreamLogoPictureBox = new System.Windows.Forms.PictureBox();
             this.logInPanel = new MetroFramework.Controls.MetroPanel();
             this.LogInButton = new MetroFramework.Controls.MetroButton();
             this.PasswordLabel = new MetroFramework.Controls.MetroLabel();
             this.UserNameLabel = new MetroFramework.Controls.MetroLabel();
             this.PasswordTextBox = new MetroFramework.Controls.MetroTextBox();
             this.UserNameTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.slipstreamLogoPictureBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel.SuspendLayout();
-            this.logInPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slipstreamLogoPictureBox)).BeginInit();
+            this.logInPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel
@@ -58,6 +58,17 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 131F));
             this.tableLayoutPanel.Size = new System.Drawing.Size(940, 500);
             this.tableLayoutPanel.TabIndex = 1;
+            // 
+            // slipstreamLogoPictureBox
+            // 
+            this.slipstreamLogoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.slipstreamLogoPictureBox.Image = global::SlipstreamHRM.Properties.Resources.SlipstreamHRM_Logo;
+            this.slipstreamLogoPictureBox.Location = new System.Drawing.Point(3, 3);
+            this.slipstreamLogoPictureBox.Name = "slipstreamLogoPictureBox";
+            this.slipstreamLogoPictureBox.Size = new System.Drawing.Size(369, 195);
+            this.slipstreamLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.slipstreamLogoPictureBox.TabIndex = 4;
+            this.slipstreamLogoPictureBox.TabStop = false;
             // 
             // logInPanel
             // 
@@ -175,17 +186,6 @@
             this.UserNameTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.UserNameTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // slipstreamLogoPictureBox
-            // 
-            this.slipstreamLogoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slipstreamLogoPictureBox.Image = global::SlipstreamHRM.Properties.Resources.SlipstreamHRM_Logo;
-            this.slipstreamLogoPictureBox.Location = new System.Drawing.Point(3, 3);
-            this.slipstreamLogoPictureBox.Name = "slipstreamLogoPictureBox";
-            this.slipstreamLogoPictureBox.Size = new System.Drawing.Size(369, 195);
-            this.slipstreamLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.slipstreamLogoPictureBox.TabIndex = 4;
-            this.slipstreamLogoPictureBox.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,10 +196,11 @@
             this.Name = "Form1";
             this.Resizable = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.slipstreamLogoPictureBox)).EndInit();
             this.logInPanel.ResumeLayout(false);
             this.logInPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.slipstreamLogoPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

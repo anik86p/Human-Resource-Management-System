@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SlipstreamHRM</RootNamespace>
     <AssemblyName>SlipstreamHRM</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -66,11 +67,63 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BAL\Admin Control Manager\EducationDashboardHandler.cs" />
+    <Compile Include="BAL\Admin Control Manager\EmployeeListDashboardHandler.cs" />
+    <Compile Include="BAL\Admin Control Manager\LanguageDashboardHandler.cs" />
+    <Compile Include="BAL\Admin Control Manager\SkillDashboardHandler.cs" />
+    <Compile Include="BAL\Admin Control Manager\UserDashboardHandler.cs" />
+    <Compile Include="DAL\Admin Control Manager\EducationInformation.cs" />
+    <Compile Include="DAL\Admin Control Manager\EmployeeInformation.cs" />
+    <Compile Include="DAL\Admin Control Manager\EmploymentStatusInformation.cs" />
+    <Compile Include="DAL\Admin Control Manager\JobCategoryInformation.cs" />
+    <Compile Include="DAL\Admin Control Manager\JobTitleInformation.cs" />
+    <Compile Include="DAL\Admin Control Manager\LanguageInformation.cs" />
+    <Compile Include="DAL\Admin Control Manager\OrganizationInformation.cs" />
+    <Compile Include="DAL\Admin Control Manager\RegionInformation.cs" />
+    <Compile Include="DAL\Admin Control Manager\SkillInformation.cs" />
+    <Compile Include="DAL\Admin Control Manager\UserInformation.cs" />
+    <Compile Include="DAL\Admin Control Manager\WorkShiftInformation.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\EducationAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\EducationAddEditForm.Designer.cs">
+      <DependentUpon>EducationAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\EmploymentStatusAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\EmploymentStatusAddEditForm.Designer.cs">
+      <DependentUpon>EmploymentStatusAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\JobCategoryAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\JobCategoryAddEditForm.Designer.cs">
+      <DependentUpon>JobCategoryAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\LanguageAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\LanguageAddEditForm.Designer.cs">
+      <DependentUpon>LanguageAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\SkillAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\SkillAddEditForm.Designer.cs">
+      <DependentUpon>SkillAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\WorkShiftAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\WorkShiftAddEdit.Designer.cs">
+      <DependentUpon>WorkShiftAddEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminControlManager.cs">
       <SubType>Form</SubType>
@@ -78,8 +131,128 @@
     <Compile Include="Forms\AdminControlManager.Designer.cs">
       <DependentUpon>AdminControlManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Admin Control Form\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\JobTitleAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\JobTitleAddEditForm.Designer.cs">
+      <DependentUpon>JobTitleAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\RegionAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\RegionAddEditForm.Designer.cs">
+      <DependentUpon>RegionAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\UserAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin Control Form\UserAddEditForm.Designer.cs">
+      <DependentUpon>UserAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Time\ADD_Project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Time\ADD_Project.Designer.cs">
+      <DependentUpon>ADD_Project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Time\Customer_ADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Time\Customer_ADD.Designer.cs">
+      <DependentUpon>Customer_ADD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlManager.Designer.cs">
+      <DependentUpon>UserControlManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Control\Admin Dashboard Control\Job Dashboard Control\EmploymentStatusDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\Job Dashboard Control\EmploymentStatusDashboardControl.Designer.cs">
+      <DependentUpon>EmploymentStatusDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\Job Dashboard Control\JobCategoriesDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\Job Dashboard Control\JobCategoriesDashboardControl.Designer.cs">
+      <DependentUpon>JobCategoriesDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\Job Dashboard Control\JobTitleDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\Job Dashboard Control\JobTitleDashboardControl.Designer.cs">
+      <DependentUpon>JobTitleDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\Job Dashboard Control\WorkShiftDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\Job Dashboard Control\WorkShiftDashboardControl.Designer.cs">
+      <DependentUpon>WorkShiftDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\JobDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\JobDashboardControl.Designer.cs">
+      <DependentUpon>JobDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\NationalitiesDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\NationalitiesDashboardControl.Designer.cs">
+      <DependentUpon>NationalitiesDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\Organization Dashboard Control\GeneralInformationDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\Organization Dashboard Control\GeneralInformationDashboardControl.Designer.cs">
+      <DependentUpon>GeneralInformationDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\OrganizationDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\OrganizationDashboardControl.Designer.cs">
+      <DependentUpon>OrganizationDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\Qualification Dashboard Control\EducationDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\Qualification Dashboard Control\EducationDashboardControl.Designer.cs">
+      <DependentUpon>EducationDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\Qualification Dashboard Control\LanguageDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\Qualification Dashboard Control\LanguageDashboardControl.Designer.cs">
+      <DependentUpon>LanguageDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\Qualification Dashboard Control\SkillDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\Qualification Dashboard Control\SkillDashboardControl.Designer.cs">
+      <DependentUpon>SkillDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\QualificationDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\QualificationDashboardControl.Designer.cs">
+      <DependentUpon>QualificationDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\UserDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Admin Dashboard Control\UserDashboardControl.Designer.cs">
+      <DependentUpon>UserDashboardControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\AdminDashboardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,11 +265,146 @@
     <Compile Include="User Control\HomeDashboardControl.Designer.cs">
       <DependentUpon>HomeDashboardControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\Leave Dashboard Control\AssignLeaveDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Leave Dashboard Control\AssignLeaveDashboardControl.Designer.cs">
+      <DependentUpon>AssignLeaveDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Leave Dashboard Control\BulkAssignDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Leave Dashboard Control\BulkAssignDashboardControl.Designer.cs">
+      <DependentUpon>BulkAssignDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Leave Dashboard Control\EntitelmentsDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Leave Dashboard Control\EntitelmentsDashboardControl.Designer.cs">
+      <DependentUpon>EntitelmentsDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Leave Dashboard Control\LeaveListDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Leave Dashboard Control\LeaveListDashboardControl.Designer.cs">
+      <DependentUpon>LeaveListDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\PIM Dashboard Control\AddEmployeeDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\PIM Dashboard Control\AddEmployeeDashboardControl.Designer.cs">
+      <DependentUpon>AddEmployeeDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\PIM Dashboard Control\BulkUpdateDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\PIM Dashboard Control\BulkUpdateDashboardControl.Designer.cs">
+      <DependentUpon>BulkUpdateDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\PIM Dashboard Control\EmployeeListDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\PIM Dashboard Control\EmployeeListDashboardControl.Designer.cs">
+      <DependentUpon>EmployeeListDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\LeaveDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\LeaveDashboardControl.Designer.cs">
+      <DependentUpon>LeaveDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\PIMDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\PIMDashboardControl.Designer.cs">
+      <DependentUpon>PIMDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Requirement Dashboard Control\CandidatesDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Requirement Dashboard Control\CandidatesDashboardControl.Designer.cs">
+      <DependentUpon>CandidatesDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Requirement Dashboard Control\DisciplineCasesDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Requirement Dashboard Control\DisciplineCasesDashboardControl.Designer.cs">
+      <DependentUpon>DisciplineCasesDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Requirement Dashboard Control\VacanciesDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Requirement Dashboard Control\VacanciesDashboardControl.Designer.cs">
+      <DependentUpon>VacanciesDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\RequirementDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\RequirementDashboardControl.Designer.cs">
+      <DependentUpon>RequirementDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Time Dashboard Control\ProjectInfoDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Time Dashboard Control\ProjectInfoDashboardControl.Designer.cs">
+      <DependentUpon>ProjectInfoDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Time Dashboard Control\ReportDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Time Dashboard Control\ReportDashboardControl.Designer.cs">
+      <DependentUpon>ReportDashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\TimeDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\TimeDashboardControl.Designer.cs">
+      <DependentUpon>TimeDashboardControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin Control Form\EducationAddEditForm.resx">
+      <DependentUpon>EducationAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin Control Form\EmploymentStatusAddEditForm.resx">
+      <DependentUpon>EmploymentStatusAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin Control Form\JobCategoryAddEditForm.resx">
+      <DependentUpon>JobCategoryAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin Control Form\LanguageAddEditForm.resx">
+      <DependentUpon>LanguageAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin Control Form\SkillAddEditForm.resx">
+      <DependentUpon>SkillAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin Control Form\WorkShiftAddEdit.resx">
+      <DependentUpon>WorkShiftAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminControlManager.resx">
       <DependentUpon>AdminControlManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin Control Form\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin Control Form\JobTitleAddEditForm.resx">
+      <DependentUpon>JobTitleAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin Control Form\RegionAddEditForm.resx">
+      <DependentUpon>RegionAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin Control Form\UserAddEditForm.resx">
+      <DependentUpon>UserAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Time\ADD_Project.resx">
+      <DependentUpon>ADD_Project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Time\Customer_ADD.resx">
+      <DependentUpon>Customer_ADD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlManager.resx">
+      <DependentUpon>UserControlManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,11 +416,98 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="User Control\Admin Dashboard Control\Job Dashboard Control\EmploymentStatusDashboardControl.resx">
+      <DependentUpon>EmploymentStatusDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Admin Dashboard Control\Job Dashboard Control\JobCategoriesDashboardControl.resx">
+      <DependentUpon>JobCategoriesDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Admin Dashboard Control\Job Dashboard Control\JobTitleDashboardControl.resx">
+      <DependentUpon>JobTitleDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Admin Dashboard Control\Job Dashboard Control\WorkShiftDashboardControl.resx">
+      <DependentUpon>WorkShiftDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Admin Dashboard Control\JobDashboardControl.resx">
+      <DependentUpon>JobDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Admin Dashboard Control\NationalitiesDashboardControl.resx">
+      <DependentUpon>NationalitiesDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Admin Dashboard Control\Organization Dashboard Control\GeneralInformationDashboardControl.resx">
+      <DependentUpon>GeneralInformationDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Admin Dashboard Control\OrganizationDashboardControl.resx">
+      <DependentUpon>OrganizationDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Admin Dashboard Control\Qualification Dashboard Control\EducationDashboardControl.resx">
+      <DependentUpon>EducationDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Admin Dashboard Control\Qualification Dashboard Control\LanguageDashboardControl.resx">
+      <DependentUpon>LanguageDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Admin Dashboard Control\Qualification Dashboard Control\SkillDashboardControl.resx">
+      <DependentUpon>SkillDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Admin Dashboard Control\QualificationDashboardControl.resx">
+      <DependentUpon>QualificationDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Admin Dashboard Control\UserDashboardControl.resx">
+      <DependentUpon>UserDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Control\AdminDashboardControl.resx">
       <DependentUpon>AdminDashboardControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\HomeDashboardControl.resx">
       <DependentUpon>HomeDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Leave Dashboard Control\AssignLeaveDashboardControl.resx">
+      <DependentUpon>AssignLeaveDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Leave Dashboard Control\BulkAssignDashboardControl.resx">
+      <DependentUpon>BulkAssignDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Leave Dashboard Control\EntitelmentsDashboardControl.resx">
+      <DependentUpon>EntitelmentsDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Leave Dashboard Control\LeaveListDashboardControl.resx">
+      <DependentUpon>LeaveListDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\PIM Dashboard Control\AddEmployeeDashboardControl.resx">
+      <DependentUpon>AddEmployeeDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\PIM Dashboard Control\BulkUpdateDashboardControl.resx">
+      <DependentUpon>BulkUpdateDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\PIM Dashboard Control\EmployeeListDashboardControl.resx">
+      <DependentUpon>EmployeeListDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\LeaveDashboardControl.resx">
+      <DependentUpon>LeaveDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\PIMDashboardControl.resx">
+      <DependentUpon>PIMDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Requirement Dashboard Control\CandidatesDashboardControl.resx">
+      <DependentUpon>CandidatesDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Requirement Dashboard Control\DisciplineCasesDashboardControl.resx">
+      <DependentUpon>DisciplineCasesDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Requirement Dashboard Control\VacanciesDashboardControl.resx">
+      <DependentUpon>VacanciesDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\RequirementDashboardControl.resx">
+      <DependentUpon>RequirementDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Time Dashboard Control\ProjectInfoDashboardControl.resx">
+      <DependentUpon>ProjectInfoDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Time Dashboard Control\ReportDashboardControl.resx">
+      <DependentUpon>ReportDashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\TimeDashboardControl.resx">
+      <DependentUpon>TimeDashboardControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -129,8 +524,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BAL\" />
-    <Folder Include="DAL\" />
+    <Folder Include="Forms\User Control Form\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Theme\SlipstreamHRM_Logo.png" />
@@ -158,6 +552,72 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Theme\Requirement_Icon_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Reports_White_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Project_Icon_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\User_Management_Logo_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Job_Logo_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Organization_Logo_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Qualification_Inco_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Nationalities_Logo_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Add_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Edit_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Felete_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Employee_List_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Add_Employee_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Bulk_Update_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Entitelments_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\AssignLeave_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Leave_List_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Bulk_Assign_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Candidates_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Vacancy_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Successfull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Green_Color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Theme\Refresh_Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
